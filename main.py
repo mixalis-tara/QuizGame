@@ -20,7 +20,7 @@ for question in questions:
     while True:
         guess = input("Enter (A, B, C, D): ").upper()
         if guess in ['A', 'B', 'C', 'D']:
-            break  # Exit the loop if the input is valid
+            break
         else:
             print("Invalid input. Please enter A, B, C, or D.")
     guesses.append(guess)

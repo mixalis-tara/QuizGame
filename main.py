@@ -17,7 +17,12 @@ for question in questions:
     print(question)
     for option in options[question_num]:
         print(option)
-    guess = input("Enter(A, B, C, D): ").upper()
+    while True:
+        guess = input("Enter (A, B, C, D): ").upper()
+        if guess in ['A', 'B', 'C', 'D']:
+            break  # Exit the loop if the input is valid
+        else:
+            print("Invalid input. Please enter A, B, C, or D.")
     guesses.append(guess)
 
     if guess == answers[question_num]:
